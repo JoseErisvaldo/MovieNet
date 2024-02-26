@@ -1,0 +1,19 @@
+.movie-list {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 10px;
+}
+.movie-list::-webkit-scrollbar {
+  height: 0px;
+}
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-item img {
+  width: 300px;
+  margin: 10px;
+}
