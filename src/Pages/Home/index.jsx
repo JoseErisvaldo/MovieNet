@@ -6,11 +6,12 @@ import api from "../../Services/Api";
 export default function Home () {
   const [listTop, setListTop] = useState([])
   const [nowPlaying, setNowPlaying] = useState([])
+  const [timeNow,setTimeNow] = useState([])
   const [popular, setPopular] = useState([])
 
   const [loading, setLoading] = useState(true)
 
-
+  
   async function loadingApi () {
     const response = await api.get('/movie/top_rated?',{
       params:{
@@ -30,6 +31,7 @@ export default function Home () {
           language:'pt-BR'
         }
       })
+      setTimeNow(response.data.dates)
       setNowPlaying(response.data.results)
     } catch (error) {
       
@@ -45,7 +47,7 @@ export default function Home () {
     })
     setPopular(response.data.results)
   }
-
+  
   useEffect(() => {
     loadingApi()
     loadingAtTheMovies()
@@ -67,7 +69,10 @@ export default function Home () {
           <MovieList list={listTop} />
         </div>
         <div>
-          <h2 className="title-home">Filmes Nos Cinemas</h2>
+          <div className="card-tilte-home">
+            <h2 className="title-home">Filmes em Cartaz</h2>
+            <h4>Período: {timeNow.minimum} a {timeNow.maximum}</h4>
+          </div>
           <MovieList list={nowPlaying} />
         </div>
         <div>

@@ -1,7 +1,7 @@
 import BtnReturn from '../Btns/Return';
 import './style.css';
 
-function MovieCard({ list }) {
+function MovieCard({ list, dateNow }) {
   
   return (
     <>
@@ -60,7 +60,7 @@ function MovieCard({ list }) {
                 {list.release_date}
               </div>
               <div className='card-languages'>
-                <h4>Idiomas Duplado</h4>
+                <h4>Idioma</h4>
                 {list.spoken_languages.map((item) => (
                   <div>
                     <div>{item.name}</div>
@@ -73,7 +73,10 @@ function MovieCard({ list }) {
               </div>
             </div>
           </div>
-          <p className="overview">{list.overview}</p>
+          <div>
+            <h3>Descrição</h3>
+            <p className="overview">{list.overview}</p>
+          </div>
         </div>
       </div>
     </>
