@@ -1,0 +1,11 @@
+.bnt-return {
+  font-size: 30px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  width: 50px;
+  color: black;
+}
+.bnt-return:hover {
+  scale: 1.1;
+}
