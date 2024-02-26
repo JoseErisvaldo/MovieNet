@@ -63,11 +63,33 @@
   color: #3498db;
 }
 
+@media (min-width: 800px) {
+  .is-menu {
+    display: none;
+  }
+  .close-menu {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
   .logo-container {
     font-size: 12px;
   }
   .menu-container {
     display: none;
+  }
+  .menu-container-mobile nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    width: 60%;
+    height: 100%;
+    background-color: #2c3e50;
+    border-left: 1px solid rgb(198, 195, 195);
+  }
+  .menu-container-mobile nav div {
+    margin: 10px;
   }
 }
