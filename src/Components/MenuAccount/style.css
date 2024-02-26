@@ -1,0 +1,22 @@
+.card-account {
+  background-color: #2c3e50;
+  border-left: 1px solid rgb(159, 159, 159);
+  position: absolute;
+  top: 0px;
+  width: 187px;
+  height: 100%;
+}
+.card-account ul li {
+  margin: 20px 5px;
+  list-style: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.card-account ul li:hover {
+  color: #3498db;
+}
+
+.close-account {
+  margin-left: 10px;
+  font-size: 30px;
+}
