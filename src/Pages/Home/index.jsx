@@ -71,7 +71,7 @@ export default function Home () {
         <div>
           <div className="card-tilte-home">
             <h2 className="title-home">Filmes em Cartaz</h2>
-            <h4>Período: {timeNow.minimum} a {timeNow.maximum}</h4>
+            <h4>Período: {new Date(timeNow.minimum).toLocaleDateString()} a {new Date(timeNow.maximum).toLocaleString()}</h4>
           </div>
           <MovieList list={nowPlaying} />
         </div>
