@@ -77,6 +77,7 @@ function MovieCard({ list, dateNow }) {
             <h3>Descrição</h3>
             <p className="overview">{list.overview}</p>
           </div>
+          <div className='trailer'> <a target='__blanck' href={`https://www.youtube.com/results?search_query=${list.title}`}>Trailer</a></div>
         </div>
       </div>
     </>
